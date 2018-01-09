@@ -8,6 +8,8 @@ class App extends Component {
       <div className="App">
        <ul>
          <ToDo />
+          <li>Trying to fix this checkpoint!</li>
+          <li>Please!</li>
          <ToDo />
        </ul>
       </div>
