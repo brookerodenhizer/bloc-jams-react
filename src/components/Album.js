@@ -58,7 +58,17 @@ class Album extends Component {
     }
 
     formatTime(time) {
-      return time ? `${Math.floor(time / 60)}:${Number(time % 60 / 100).toFixed(2).substr(2,3)}` : '-:--'
+      const minutes = Math.floor(time / 60);
+      let seconds = Math.floor(time % 60);
+      if (seconds < 10) {
+        seconds = '0' + seconds;
+      }
+      return time ? `${minutes}:${seconds}` : '-:--'
+      /*150.6;
+        time % 60 / 100 = 0.306
+        0.306.toFixed(2) = '0.31'
+        '0.31'.substr(2, 3) = '31';
+      */
     }
 
     handleSongClick(song) {
