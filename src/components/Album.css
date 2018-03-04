@@ -1,0 +1,42 @@
+.album{
+  margin: auto;
+
+}
+
+#album-cover-art{
+  margin-top: 50px;
+}
+
+#album-title{
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.artist{
+  font-weight: lighter;
+}
+
+#release-info{
+
+
+}
+.song-number{
+  display: block;
+}
+
+/*Not Playing*/
+button:hover .song-number,
+button:hover .ion-pause,
+.ion-pause,
+.ion-play {
+display: none;
+}
+
+/*Playing
+{this.isPlaying == true} .ion-pause{
+  display: block;
+}
+{this.isPlaying == false} .ion-play{
+  display: block;
+}
+*/
