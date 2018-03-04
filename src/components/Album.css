@@ -20,16 +20,25 @@
 
 
 }
-.song-number{
+.ion-pause {
   display: block;
 }
 
+.song-number,
+.ion-play {
+  display: none;
+}
 /*Not Playing*/
 button:hover .song-number,
 button:hover .ion-pause,
 .ion-pause,
 .ion-play {
 display: none;
+}
+
+.ion-pause,
+.song-number {
+  display: block;
 }
 
 /*Playing

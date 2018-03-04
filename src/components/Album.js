@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
-import './Album.css';
+import styles from './Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -111,6 +111,7 @@ class Album extends Component {
       this.setState({ volume: newVolume });
     }
 
+
   render() {
     return (
       <section className="album">
@@ -133,9 +134,14 @@ class Album extends Component {
               <tr className={song} key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="song-actions">
                   <button>
-                    <span className="song-number">{index+1}</span>
-                    <span className="ion-play"></span>
-                    <span className="ion-pause"></span>
+                  { (this.state.currentSong.title === song.title) ?
+                  <span className={this.state.isPlaying ? "ion-pause" : "ion-play"}></span>
+                  :
+                  (this.state.isHovered === index + 1) ?
+                  <span className="ion-play"></span>
+                  :
+                  <span className="song-number">{index + 1}</span>
+                  }
                   </button>
                 </td>
                 <td className="song-title">{song.title}</td>
